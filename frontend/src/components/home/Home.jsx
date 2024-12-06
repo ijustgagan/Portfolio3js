@@ -53,7 +53,7 @@ const Home = ({ timelines,projects, skills }) => {
     const venus = new THREE.Mesh(venusGeometry, venusMaterial);
     venus.position.set(8, 5, 5);
 
-    const pointLight = new THREE.PointLight(0xffffff, 75);
+    const pointLight = new THREE.PointLight(0xffffff, 100);
     const pointLight2 = new THREE.PointLight(0xffffff, 4);
 
     pointLight.position.set(8, 5, 5);
@@ -100,7 +100,7 @@ const Home = ({ timelines,projects, skills }) => {
 
     const animated = () => {
       requestAnimationFrame(animated);
-      moon.rotation.y += 0.005;
+      moon.rotation.y += 0.015;
       venus.rotation.y += 0.005;
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.render(scene, camera);
